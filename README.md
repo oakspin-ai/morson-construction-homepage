@@ -2,7 +2,7 @@
 
 A redesigned homepage for [Mor-Son Construction Inc.](https://www.morsonconstruction.com/), a family-run builder in San Clemente, CA, prepared by OakSpin AI as a pitch concept.
 
-**Live preview:** https://varunsharma109.github.io/morson-construction-homepage/
+**Live preview:** https://oakspin-ai.github.io/morson-construction-homepage/
 
 ## What changed from the current site
 
