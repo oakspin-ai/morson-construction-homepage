@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mor-Son Construction | Builders of fine homes, San Clemente</title>
+<meta name="description" content="Mor-Son Construction builds custom homes and down-to-the-studs remodels on the San Clemente coast. Owner-run by Bob Morris. CA License B-849299. Family builders since 1974.">
+<meta property="og:title" content="Mor-Son Construction | Builders of fine homes, San Clemente">
+<meta property="og:description" content="Custom homes, whole-home remodels, kitchens and baths. Owner-run from the first bid to the final walk-through.">
+<meta property="og:image" content="assets/img/beach-house-front.jpg">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/beach-house-street.webp" type="image/webp">
+<style>
+:root{
+  --fog:#ECEEEB;
+  --paper:#FFFFFF;
+  --ink:#1F2724;
+  --ink-soft:#4A5450;
+  --dusk:#26343B;
+  --dusk-line:#3A4A52;
+  --sun:#F3B01C;
+  --redwood:#9B5333;
+  --line:#CDD2CE;
+
+  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+
+  --gutter:clamp(20px,5vw,72px);
+  --max:1320px;
+  --header-h:76px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1.125rem;line-height:1.62;font-optical-sizing:auto;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--sans);margin:0;font-weight:800;font-stretch:118%;letter-spacing:-.018em;line-height:1.02}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:2px}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;z-index:100;font-family:var(--sans)}
+.skip:focus{left:8px}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:0 1.6em;border-radius:999px;font-family:var(--sans);font-size:1rem;font-weight:700;font-stretch:108%;text-decoration:none;border:2px solid var(--ink);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--redwood);border-color:var(--redwood)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.hero .btn-line:not(:hover){background:var(--fog)}
+.btn-sun{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.btn-sun:hover{background:#fff;border-color:#fff}
+
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.site-header.scrolled{border-bottom-color:var(--line)}
+.header-inner{display:flex;align-items:center;gap:28px;height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+.brand img{width:58px;height:auto}
+.brand-name{font-family:var(--sans);font-weight:800;font-stretch:122%;font-size:1.06rem;line-height:1.05;letter-spacing:-.01em}
+.brand-name small{display:block;font-weight:500;font-stretch:100%;font-size:.78rem;letter-spacing:0;color:var(--ink-soft);margin-top:3px}
+.nav{margin-left:auto;display:flex;align-items:center;gap:30px;font-family:var(--sans);font-size:.98rem;font-weight:600}
+.nav a{text-decoration:none;padding:6px 0;background:linear-gradient(var(--redwood),var(--redwood)) left bottom/0 2px no-repeat;transition:background-size .2s}
+.nav a:hover{background-size:100% 2px}
+.header-actions{display:flex;align-items:center;gap:18px;font-family:var(--sans)}
+.phone{font-weight:700;font-size:.98rem;text-decoration:none;white-space:nowrap}
+.phone:hover{color:var(--redwood)}
+.header-actions .btn{min-height:44px;padding:0 1.25em;font-size:.95rem}
+.menu-toggle{display:none;flex-shrink:0;margin-left:auto;background:none;border:0;width:48px;height:48px;padding:12px;cursor:pointer;color:var(--ink)}
+.menu-toggle span{display:block;height:2px;background:currentColor;margin:5px 0;transition:transform .2s,opacity .2s}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:var(--fog);isolation:isolate}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);min-height:min(calc(100svh - var(--header-h) - 64px),800px)}
+.hero-copy{position:relative;z-index:3;display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,6vw,88px) clamp(28px,4vw,64px) clamp(96px,10vw,150px) max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)))}
+.hero h1{font-size:clamp(2.6rem,4.6vw,4.7rem);font-stretch:125%;line-height:.97;letter-spacing:-.03em;max-width:12.5ch}
+.hero-lede{margin:clamp(22px,2.4vw,32px) 0 clamp(28px,3vw,40px);font-size:clamp(1.12rem,1.35vw,1.3rem);line-height:1.55;max-width:40ch;color:var(--ink-soft)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-photo{position:relative;z-index:2;margin:0}
+.hero-photo picture,.hero-photo img{width:100%;height:100%}
+.hero-photo img{object-fit:cover;object-position:42% 60%}
+.hero-photo figcaption{position:absolute;right:16px;bottom:16px;background:rgba(31,39,36,.72);color:#fff;font-family:var(--sans);font-size:.82rem;font-weight:500;padding:6px 12px;border-radius:999px}
+.sun{--s:clamp(300px,34vw,520px);position:absolute;z-index:1;width:var(--s);aspect-ratio:1;border-radius:50%;background:var(--sun);left:calc(51.9% - var(--s)*.58);bottom:calc(var(--s)*-.5);animation:rise 1.6s cubic-bezier(.2,.7,.2,1) .15s both}
+@keyframes rise{from{transform:translateY(38%)}to{transform:none}}
+
+/* ---------- credentials strip ---------- */
+.creds{background:var(--ink);color:#E7EAE8;font-family:var(--sans)}
+.creds ul{list-style:none;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;padding-block:20px}
+.creds li{font-size:.95rem;font-weight:500;display:flex;align-items:baseline;gap:8px}
+.creds strong{color:#fff;font-weight:700;font-stretch:112%}
+
+/* ---------- section scaffolding ---------- */
+.section{padding-block:clamp(72px,10vw,140px)}
+.section-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:24px clamp(32px,6vw,96px);align-items:end;margin-bottom:clamp(40px,5vw,72px)}
+.section-head h2{font-size:clamp(2.1rem,4vw,3.6rem)}
+.section-head p{margin:0;max-width:52ch;color:var(--ink-soft)}
+
+/* ---------- owner intro ---------- */
+.owner{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,7vw,120px);align-items:start}
+.owner-statement{font-family:var(--serif);font-size:clamp(1.55rem,2.5vw,2.25rem);line-height:1.32;font-weight:400;letter-spacing:-.005em;margin:0 0 .8em;max-width:30ch}
+.owner-body{max-width:58ch;color:var(--ink-soft)}
+.facts{margin:0;border-top:2px solid var(--ink)}
+.facts div{display:grid;grid-template-columns:minmax(0,9fr) minmax(0,11fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.facts dt{font-family:var(--sans);font-weight:700;font-size:.95rem;font-stretch:108%}
+.facts dd{margin:0;font-size:1rem;line-height:1.5;color:var(--ink-soft)}
+
+/* ---------- process: from the dirt up ---------- */
+.process{background:var(--fog)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.6vw,40px);counter-reset:step}
+.step{counter-increment:step;display:flex;flex-direction:column}
+.step-photo{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:#d9ddda}
+.step-photo img{width:100%;height:100%;object-fit:cover}
+.step-rail{display:flex;align-items:center;gap:14px;margin:26px 0 14px}
+.step-rail::before{content:counter(step);flex-shrink:0;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--sun);font-family:var(--sans);font-weight:800;font-size:1.05rem}
+.step-rail::after{content:"";flex:1;height:2px;background:var(--ink);opacity:.18}
+.step:last-child .step-rail::after{display:none}
+.step h3{font-size:1.45rem;margin-bottom:10px}
+.step p{font-size:1.02rem;color:var(--ink-soft);margin:0}
+.step .step-credit{font-family:var(--sans);font-size:.82rem;font-weight:500;color:var(--redwood);margin-top:14px}
+
+/* ---------- work ---------- */
+.work-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.project{margin:0;display:flex;flex-direction:column}
+.project .ph{overflow:hidden;border-radius:4px;background:#d9ddda;flex:1}
+.project img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.project:hover img{transform:scale(1.025)}
+.project figcaption{padding-top:16px}
+.project h3{font-size:1.3rem;font-stretch:112%;margin-bottom:6px}
+.project p{margin:0;font-size:1rem;color:var(--ink-soft);max-width:48ch}
+.p-feature{grid-column:1 / span 8}
+.p-feature .ph{aspect-ratio:auto;min-height:420px}
+.p-bath{grid-column:9 / span 4}
+.p-bath .ph{min-height:420px}
+.p-bath img{object-position:50% 60%}
+.p-kitchen{grid-column:1 / span 7}
+.p-kitchen .ph{aspect-ratio:16/10}
+.tour{grid-column:8 / span 5;align-self:stretch;background:var(--fog);border-radius:4px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column}
+.tour h3{font-size:1.45rem;margin-bottom:12px}
+.tour p{font-size:1rem;color:var(--ink-soft)}
+.tour ul{list-style:none;margin:6px 0 0;padding:0;font-family:var(--sans);font-size:.98rem;font-weight:500}
+.tour li{padding:11px 0;border-top:1px solid var(--line);display:flex;gap:12px;align-items:center}
+.tour li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--sun);flex-shrink:0}
+
+/* ---------- services ---------- */
+.services{background:var(--paper);border-top:1px solid var(--line)}
+.service-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(32px,6vw,96px);margin:0;padding:0;list-style:none}
+.service-list li{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:20px;padding:24px 0;border-top:1px solid var(--line)}
+.service-list h3{font-size:1.15rem;font-stretch:110%;line-height:1.2}
+.service-list p{margin:0;font-size:1rem;color:var(--ink-soft)}
+.services-note{margin-top:32px;font-size:1rem;color:var(--ink-soft)}
+.services-note a{color:var(--redwood);font-weight:500}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--dusk);color:#EEF1EF}
+.reviews .section-head p{color:#B9C3C6}
+.review-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:start}
+.review blockquote{margin:0}
+.review blockquote p{font-size:1.15rem;line-height:1.6}
+.review-lead blockquote p{font-size:clamp(1.45rem,2.3vw,2rem);line-height:1.36;color:#fff}
+.review footer{font-family:var(--sans);font-size:.95rem;margin-top:22px;display:flex;align-items:center;gap:12px;color:#B9C3C6}
+.review footer strong{color:#fff;font-weight:700}
+.review footer::before{content:"";width:28px;height:2px;background:var(--sun)}
+.review details{margin-top:18px;font-size:1.05rem;color:#CBD3D5}
+.review summary{cursor:pointer;font-family:var(--sans);font-weight:600;font-size:.95rem;color:var(--sun);list-style:none;display:inline-flex;align-items:center;gap:8px}
+.review summary::-webkit-details-marker{display:none}
+.review summary::after{content:"+";font-size:1.2rem;line-height:1;transition:transform .2s}
+.review details[open] summary::after{transform:rotate(45deg)}
+.review details p{margin:14px 0 0}
+.review-side{border-left:1px solid var(--dusk-line);padding-left:clamp(24px,3vw,48px)}
+.ratings{display:flex;flex-wrap:wrap;gap:28px;margin-top:clamp(48px,6vw,80px);padding-top:28px;border-top:1px solid var(--dusk-line);font-family:var(--sans);font-size:.95rem;color:#B9C3C6}
+.ratings strong{display:block;color:#fff;font-size:1.25rem;font-stretch:115%;font-weight:800}
+
+/* ---------- inquiry ---------- */
+.inquiry{background:var(--fog)}
+.inquiry-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
+.inquiry h2{font-size:clamp(2.2rem,4.2vw,3.8rem);margin-bottom:22px}
+.inquiry-aside p{color:var(--ink-soft);max-width:40ch}
+.call-card{margin-top:32px;padding-top:24px;border-top:2px solid var(--ink);font-family:var(--sans)}
+.call-card a{display:block;font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:800;font-stretch:118%;text-decoration:none;letter-spacing:-.01em}
+.call-card a:hover{color:var(--redwood)}
+.call-card span{font-size:.95rem;color:var(--ink-soft)}
+form{background:var(--paper);border-radius:6px;padding:clamp(24px,3.4vw,48px);font-family:var(--sans)}
+fieldset{border:0;margin:0 0 26px;padding:0}
+legend,.field label{display:block;font-weight:700;font-size:.98rem;margin-bottom:10px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border:1.5px solid var(--line);border-radius:999px;font-size:.95rem;font-weight:500;cursor:pointer;transition:background-color .15s,border-color .15s,color .15s}
+.chip span:hover{border-color:var(--ink)}
+.chip input:checked + span{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip input:focus-visible + span{outline:3px solid var(--sun);outline-offset:2px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:20px}
+.field input,.field select,.field textarea{width:100%;min-height:50px;padding:12px 14px;border:1.5px solid var(--line);border-radius:6px;background:#fff;font:inherit;font-size:1rem;color:var(--ink)}
+.field textarea{min-height:120px;resize:vertical;font-family:var(--serif);font-size:1.05rem}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(243,176,28,.55)}
+.field .hint{font-weight:400;color:var(--ink-soft);font-size:.88rem}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:8px}
+.form-foot p{margin:0;font-size:.9rem;color:var(--ink-soft);flex:1;min-width:220px}
+.form-status{margin-top:18px;font-size:.98rem;font-weight:500;min-height:1.5em}
+.form-status.error{color:#A1261B}
+
+/* ---------- footer ---------- */
+.site-footer{background:var(--ink);color:#C9D0CD;font-family:var(--sans);font-size:.95rem;padding-block:64px 36px}
+.footer-grid{display:grid;grid-template-columns:minmax(0,5fr) repeat(2,minmax(0,3fr));gap:40px}
+.footer-brand{display:flex;gap:16px;align-items:flex-start}
+.footer-brand .badge{background:#fff;border-radius:12px;padding:8px;display:grid;place-items:center;flex-shrink:0}
+.footer-brand img{width:76px}
+.footer-brand p{margin:0;max-width:30ch;line-height:1.5}
+.footer-brand strong{display:block;color:#fff;font-size:1.1rem;font-stretch:120%;margin-bottom:6px}
+.site-footer h3{font-size:.95rem;font-stretch:110%;color:#fff;margin-bottom:12px;letter-spacing:0}
+.site-footer ul{list-style:none;margin:0;padding:0;line-height:2}
+.site-footer a{text-decoration:none}
+.site-footer a:hover{color:#fff;text-decoration:underline}
+.footer-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:56px;padding-top:24px;border-top:1px solid #36403C;font-size:.85rem;color:#98A29E}
+
+/* ---------- mobile call bar ---------- */
+.callbar{display:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .nav{gap:22px}
+  .header-actions .phone{display:none}
+  .p-feature{grid-column:1 / -1;grid-row:auto}
+  .p-feature .ph{aspect-ratio:4/3;min-height:0}
+  .p-bath{grid-column:1 / -1}
+  .p-bath .ph{min-height:0;aspect-ratio:4/3}
+  .p-kitchen{grid-column:1 / -1}
+  .tour{grid-column:1 / -1}
+}
+@media (max-width:900px){
+  :root{--header-h:66px}
+  .menu-toggle{display:block}
+  .brand img{width:48px}
+  .header-actions{display:none}
+  .nav{position:fixed;inset:var(--header-h) 0 auto 0;flex-direction:column;align-items:stretch;gap:0;background:#fff;padding:8px var(--gutter) 24px;border-bottom:1px solid var(--line);box-shadow:0 18px 30px -20px rgba(31,39,36,.35);transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility 0s .2s}
+  .nav.open{opacity:1;transform:none;visibility:visible;transition:opacity .2s,transform .2s}
+  .nav a{padding:16px 0;border-bottom:1px solid var(--line);font-size:1.1rem;background:none}
+  .nav .nav-cta{display:flex;margin-top:18px;border:2px solid var(--ink);border-radius:999px;justify-content:center;background:var(--ink);color:#fff}
+  .hero-grid{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding:44px var(--gutter) 40px}
+  .hero h1{max-width:12ch}
+  .hero-photo{aspect-ratio:4/3}
+  .sun{--s:250px;left:auto;right:-70px;bottom:calc(75vw - 95px)}
+  .creds ul{justify-content:flex-start}
+  .section-head,.owner,.review-grid,.inquiry-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:56px}
+  .step-photo{aspect-ratio:4/3}
+  .step-rail::after{display:none}
+  .service-list{grid-template-columns:1fr}
+  .review-side{border-left:0;padding-left:0;border-top:1px solid var(--dusk-line);padding-top:40px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-brand{grid-column:1 / -1}
+  .callbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
+  .callbar .btn{min-height:48px;padding:0 1em}
+  body{padding-bottom:74px}
+}
+@media (max-width:600px){
+  body{font-size:1.06rem}
+  .brand-name small{display:none}
+  .field-row{grid-template-columns:1fr}
+  .service-list li{grid-template-columns:1fr;gap:6px}
+  .facts div{grid-template-columns:1fr;gap:4px}
+  .creds li{width:100%;flex-direction:column;gap:0}
+  .brand-name{font-size:.98rem}
+  .hero-actions .btn{flex:1 1 auto}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Mor-Son Construction, home">
+      <img src="assets/img/morson-logo-200.png" width="200" height="184" alt="">
+      <span class="brand-name">Mor-Son Construction<small>Builders of fine homes</small></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="#process">How we build</a>
+      <a href="#work">Our work</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#start" class="nav-cta" hidden>Start a project</a>
+    </nav>
+    <div class="header-actions">
+      <a class="phone" href="tel:+19492492712">(949) 249-2712</a>
+      <a class="btn btn-ink" href="#start">Start a project</a>
+    </div>
+    <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 id="hero-title">Builders of fine homes on the San Clemente coast.</h1>
+        <p class="hero-lede">Custom homes, down-to-the-studs remodels, kitchens and baths. Owner Bob Morris runs every job himself, from early design to the final walk-through.</p>
+        <div class="hero-actions">
+          <a class="btn btn-ink" href="#start">Start a project</a>
+          <a class="btn btn-line" href="#work">See our work</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <picture>
+          <source srcset="assets/img/beach-house-street.webp" type="image/webp">
+          <img src="assets/img/beach-house-street.jpg" width="1120" height="794" alt="Two-story modern coastal home with smooth stucco, wood-slat siding and a glass-rail rooftop deck, built by Mor-Son in San Clemente" fetchpriority="high">
+        </picture>
+        <figcaption>Recent build, San Clemente</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="creds" aria-label="Credentials">
+    <ul class="wrap">
+      <li><strong>Since 1974</strong> Family construction business</li>
+      <li><strong>CA License B-849299</strong> General building contractor</li>
+      <li><strong>BBB A+</strong> Accredited since 2020</li>
+      <li><strong>5.0 on Angi</strong> Verified homeowner reviews</li>
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="owner-title">
+    <div class="wrap owner">
+      <div>
+        <h2 id="owner-title" class="owner-statement">One builder on your job, start to finish. The person who bids your project is the one on site at the end of the day, making sure it&rsquo;s secure.</h2>
+        <div class="owner-body">
+          <p>Mor-Son Construction is a San Clemente family business with roots going back to 1974. We build complete homes from bare ground, and we take on smaller kitchen, bathroom and hardscape projects too. No project is too big or too small.</p>
+          <p>You work with Bob Morris directly. He knows the local architects and subcontractors, and the City of San Clemente&rsquo;s approval process. Clients count that as one of the biggest advantages of hiring us.</p>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>Owner</dt><dd>Bob Morris, licensed general contractor</dd></div>
+        <div><dt>Based in</dt><dd>San Clemente, California</dd></div>
+        <div><dt>Building since</dt><dd>1974, as a family business</dd></div>
+        <div><dt>License</dt><dd>California B-849299</dd></div>
+        <div><dt>Work we take on</dt><dd>Residential and select commercial</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section process" id="process" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="process-title">From the dirt up.</h2>
+        <p>Every build moves through the same three stages, and Bob runs all of them. Here is what that looks like on our job sites.</p>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <div class="step-photo">
+            <picture>
+              <source srcset="assets/img/site-foundation.webp" type="image/webp">
+              <img src="assets/img/site-foundation.jpg" width="1100" height="1466" loading="lazy" alt="Excavation for a foundation improvement beneath a shored-up house, with a compact excavator on site">
+            </picture>
+          </div>
+          <div class="step-rail" aria-hidden="true"></div>
+          <h3>Plan and permit</h3>
+          <p>Bob joins early: design reviews, material choices and value engineering, then the City approval process. Structural problems in older homes get found and fixed before they cost you.</p>
+          <p class="step-credit">Foundation improvements project</p>
+        </li>
+        <li class="step">
+          <div class="step-photo">
+            <picture>
+              <source srcset="assets/img/site-framing.webp" type="image/webp">
+              <img src="assets/img/site-framing.jpg" width="1600" height="1200" loading="lazy" alt="A single-story home stripped to its framing during a whole-house remodel, with a skid steer grading the front yard">
+            </picture>
+          </div>
+          <div class="step-rail" aria-hidden="true"></div>
+          <h3>Bid and build</h3>
+          <p>Subcontractors walk the job, pick up plans and bid against a firm deadline. Bob holds every trade accountable and keeps phases moving without dead time between them.</p>
+          <p class="step-credit">Whole-home remodel in progress</p>
+        </li>
+        <li class="step">
+          <div class="step-photo">
+            <picture>
+              <source srcset="assets/img/rooftop-deck.webp" type="image/webp">
+              <img src="assets/img/rooftop-deck.jpg" width="1263" height="903" loading="lazy" alt="Finished rooftop deck at sunset with lounge seating, a fire table and ocean views">
+            </picture>
+          </div>
+          <div class="step-rail" aria-hidden="true"></div>
+          <h3>Finish and move in</h3>
+          <p>The last coat of stucco gets the same attention as the foundation. One family&rsquo;s first housewarming invitation went to Bob.</p>
+          <p class="step-credit">Rooftop deck, recent coastal build</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="work-title">Recent work.</h2>
+        <p>New homes and complete remodels on the coast, plus the kitchens and bathrooms that go with them. All photographed on our own projects.</p>
+      </div>
+      <div class="work-grid">
+        <figure class="project p-feature">
+          <div class="ph">
+            <picture>
+              <source srcset="assets/img/beach-house-front.webp" type="image/webp">
+              <img src="assets/img/beach-house-front.jpg" width="2000" height="1500" loading="lazy" alt="Street view of a modern San Clemente beach house with palm trees, wood siding and a flat roofline">
+            </picture>
+          </div>
+          <figcaption>
+            <h3>Beach house, San Clemente</h3>
+            <p>A modern coastal home with smooth stucco, warm wood siding and a glass-railed roof deck.</p>
+          </figcaption>
+        </figure>
+        <figure class="project p-bath">
+          <div class="ph">
+            <picture>
+              <source srcset="assets/img/bath-copper-tub.webp" type="image/webp">
+              <img src="assets/img/bath-copper-tub.jpg" width="1100" height="1466" loading="lazy" alt="Remodeled bathroom with a hammered-metal freestanding tub, crystal chandelier and stone walls">
+            </picture>
+          </div>
+          <figcaption>
+            <h3>Bathroom remodel</h3>
+            <p>Freestanding hammered-metal tub, marble floor and a frameless glass shower.</p>
+          </figcaption>
+        </figure>
+        <figure class="project p-kitchen">
+          <div class="ph">
+            <picture>
+              <source srcset="assets/img/kitchen.webp" type="image/webp">
+              <img src="assets/img/kitchen.jpg" width="1600" height="1200" loading="lazy" alt="Remodeled kitchen with beadboard cabinets, a stone-topped island, a professional range and a hand-painted tile backsplash">
+            </picture>
+          </div>
+          <figcaption>
+            <h3>Complete home remodel</h3>
+            <p>Open kitchen with a stone-topped island, pro range and custom tile backsplash.</p>
+          </figcaption>
+        </figure>
+        <aside class="tour" aria-labelledby="tour-title">
+          <h3 id="tour-title">Inside a recent build</h3>
+          <p>A coastal home we recently completed includes:</p>
+          <ul>
+            <li>Smooth Level 5 stucco finish</li>
+            <li>Residential elevator</li>
+            <li>Spiral staircase</li>
+            <li>Flat rock roof</li>
+            <li>Modern kitchen</li>
+            <li>Bathroom with walk-in shower</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="services-title">What we build.</h2>
+        <p>Whatever the size of the job, you get the same owner-managed crew. Most of our work is in San Clemente and along the coast to Laguna Beach.</p>
+      </div>
+      <ul class="service-list">
+        <li><h3>Custom homes</h3><p>Complete new builds from bare lot to final inspection, managed by one contractor.</p></li>
+        <li><h3>Whole-home remodels</h3><p>Down-to-the-studs renovations, including older beach homes that need reworking.</p></li>
+        <li><h3>Kitchens and bathrooms</h3><p>Single-room remodels get the same planning and finish quality as a full build.</p></li>
+        <li><h3>Foundations and structural</h3><p>Foundation improvements and repairs to older construction before it becomes a bigger problem.</p></li>
+        <li><h3>Hardscape and outdoor living</h3><p>Patios, decks and rooftop spaces built to handle the coastal climate.</p></li>
+        <li><h3>Metal roofing</h3><p>Durable metal roof systems for new homes and re-roofs.</p></li>
+        <li><h3>Green building</h3><p>Energy-conscious materials and methods, chosen to fit your budget.</p></li>
+        <li><h3>Construction consulting</h3><p>Help with bids, budgets, schedules and City approvals when you&rsquo;re running your own project.</p></li>
+      </ul>
+      <p class="services-note">Not sure where your project fits? <a href="#start">Tell us about it</a> and Bob will let you know if we&rsquo;re the right builder.</p>
+    </div>
+  </section>
+
+  <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="reviews-title">What clients say.</h2>
+        <p>Reviews from a homeowner and a trade partner, unedited apart from shortening.</p>
+      </div>
+      <div class="review-grid">
+        <article class="review review-lead">
+          <blockquote>
+            <p>&ldquo;We did a significant &lsquo;down to the studs&rsquo; remodel at T-Street beach in San Clemente. Several times, I &lsquo;caught&rsquo; Bob on the job site on evenings and weekends, just making sure everything was secure. We got the house of our dreams, and we also gained a new friend.&rdquo;</p>
+          </blockquote>
+          <details>
+            <summary>Read the full review</summary>
+            <p>Without hesitation, we give Bob Morris and Mor-Son the highest endorsement possible. Bob was involved from early design, material selection (helping &ldquo;value engineer&rdquo;), through the approval process and all phases of construction. Bob did a great job of managing the bid process to all the sub-contractors, and holding them accountable. He has great relationships and respect with the architect, sub-contractors, the city of San Clemente (this is a HUGE asset) and most of the surfers in the area.</p>
+            <p>The day construction began, Bob had each subcontractor roll in, pick up plans, review the work, and set a deadline to receive bids, and at that moment I knew we had entrusted our dream to the right person. Bob was always patient and consultative as we made decisions, but still drove the project to minimize &ldquo;down time&rdquo; from one phase of construction to another. He takes great pride in his work. The first invite we sent for our first party was to Bob.</p>
+          </details>
+          <footer><span><strong>J.G.</strong>, homeowner, San Clemente</span></footer>
+        </article>
+        <article class="review review-side">
+          <blockquote>
+            <p>&ldquo;Bob has taken this and is transforming an awkward living space into one with an open feeling with fantastic views from nearly every room in the house. He seems to be unflappable. There&rsquo;s no drama, just great results.&rdquo;</p>
+          </blockquote>
+          <details>
+            <summary>Read the full review</summary>
+            <p>Bob Morris of Mor-Son Construction is a great person to work with. He is extremely knowledgeable and thorough. I&rsquo;ve done several bathroom projects with him and have found his work to be top notch. Now we are working together on a remodel of an older house in Laguna Beach, CA. The kitchen was tight, the original construction was &ldquo;sketchy&rdquo; to say the least. Whenever some problem with the old construction presents itself he can quickly evaluate and remedy the issue.</p>
+          </details>
+          <footer><span><strong>Woodcrafters Intl Inc.</strong>, trade partner, Laguna Beach remodel</span></footer>
+        </article>
+      </div>
+      <div class="ratings">
+        <div><strong>A+</strong>Better Business Bureau, accredited since 2020</div>
+        <div><strong>5.0</strong>Homeowner rating on Angi</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section inquiry" id="start" aria-labelledby="start-title">
+    <div class="wrap inquiry-grid">
+      <div class="inquiry-aside">
+        <h2 id="start-title">Tell us about your project.</h2>
+        <p>Share a few details and Bob will get back to you to talk through scope, timing and next steps. There&rsquo;s no obligation, and you&rsquo;ll be talking with the owner, not a call center.</p>
+        <div class="call-card">
+          <span>Prefer to talk it through?</span>
+          <a href="tel:+19492492712">(949) 249-2712</a>
+          <span>Bob Morris, owner</span>
+        </div>
+      </div>
+
+      <form id="inquiry-form" novalidate>
+        <fieldset>
+          <legend>What are you planning?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="type" value="New custom home" required><span>New custom home</span></label>
+            <label class="chip"><input type="radio" name="type" value="Whole-home remodel"><span>Whole-home remodel</span></label>
+            <label class="chip"><input type="radio" name="type" value="Kitchen or bathroom"><span>Kitchen or bathroom</span></label>
+            <label class="chip"><input type="radio" name="type" value="Foundation or structural"><span>Foundation or structural</span></label>
+            <label class="chip"><input type="radio" name="type" value="Roofing or outdoor"><span>Roofing or outdoor</span></label>
+            <label class="chip"><input type="radio" name="type" value="Something else"><span>Something else</span></label>
+          </div>
+        </fieldset>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-city">Project location</label>
+            <input id="f-city" name="city" type="text" autocomplete="address-level2" placeholder="e.g. San Clemente">
+          </div>
+          <div class="field">
+            <label for="f-when">When do you want to start?</label>
+            <select id="f-when" name="when">
+              <option value="">Choose one</option>
+              <option>As soon as possible</option>
+              <option>In the next 3 months</option>
+              <option>In 3 to 12 months</option>
+              <option>Still planning, no date yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-notes">About the project <span class="hint">(optional)</span></label>
+          <textarea id="f-notes" name="notes" placeholder="Size of the home, what you'd like to change, whether you have plans or an architect yet"></textarea>
+        </div>
+        <div class="form-foot">
+          <button class="btn btn-ink" type="submit">Send project details</button>
+          <p>We&rsquo;ll need a phone number or an email to reply.</p>
+        </div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="badge"><img src="assets/img/morson-logo-200.png" width="200" height="184" alt="Mor-Son Construction logo"></span>
+        <p><strong>Mor-Son Construction Inc.</strong>Builders of fine homes in San Clemente, California. Family construction business since 1974.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+19492492712">(949) 249-2712</a></li>
+          <li><a href="mailto:morson32@msn.com">morson32@msn.com</a></li>
+          <li>San Clemente, CA</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#process">How we build</a></li>
+          <li><a href="#work">Our work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#start">Start a project</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; <span id="year">2026</span> Mor-Son Construction Inc. CA License B-849299.</span>
+      <span>Homepage concept prepared by OakSpin AI.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Quick contact">
+  <a class="btn btn-line" href="tel:+19492492712">Call Bob</a>
+  <a class="btn btn-ink" href="#start">Start a project</a>
+</div>
+
+<script>
+(function(){
+  var header=document.querySelector('.site-header');
+  var onScroll=function(){header.classList.toggle('scrolled',window.scrollY>8)};
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var toggle=document.querySelector('.menu-toggle'),nav=document.getElementById('site-nav'),navCta=nav.querySelector('.nav-cta');
+  var mq=window.matchMedia('(max-width:900px)');
+  var syncCta=function(){navCta.hidden=!mq.matches};
+  mq.addEventListener?mq.addEventListener('change',syncCta):mq.addListener(syncCta);syncCta();
+  var setMenu=function(open){
+    nav.classList.toggle('open',open);
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+  };
+  toggle.addEventListener('click',function(){setMenu(!nav.classList.contains('open'))});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){setMenu(false);toggle.focus()}});
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  var form=document.getElementById('inquiry-form'),status=document.getElementById('form-status');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(form),get=function(k){return (d.get(k)||'').toString().trim()};
+    status.className='form-status error';
+    if(!get('type')){status.textContent='Choose the type of project you’re planning.';form.querySelector('input[name=type]').focus();return}
+    if(!get('name')){status.textContent='Add your name so Bob knows who to reply to.';document.getElementById('f-name').focus();return}
+    if(!get('phone')&&!get('email')){status.textContent='Add a phone number or an email so we can reply.';document.getElementById('f-phone').focus();return}
+    var lines=[
+      'Project: '+get('type'),
+      'Location: '+(get('city')||'Not given'),
+      'Timing: '+(get('when')||'Not given'),
+      '',
+      'Name: '+get('name'),
+      'Phone: '+(get('phone')||'Not given'),
+      'Email: '+(get('email')||'Not given'),
+      '',
+      get('notes')
+    ];
+    var subject='Project inquiry: '+get('type')+(get('city')?' in '+get('city'):'');
+    window.location.href='mailto:morson32@msn.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));
+    status.className='form-status';
+    status.textContent='Your email app should open with these details filled in. If it doesn’t, call Bob at (949) 249-2712.';
+  });
+})();
+</script>
+</body>
+</html>
